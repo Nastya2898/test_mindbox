@@ -1,0 +1,2 @@
+new_df = Products.join(ProductCategories, Products.id == ProductCategories.ProductId, 'left')\
+.join(Categories, Categories.id == ProductCategories.ProductId).select(Products.name, Categories.age).show()
