@@ -35,22 +35,22 @@ class Right(Figure):
     def area(self):
         return self.a * self.b
 
-# def area(*args):
-#     if len(args) == 1:
-#         return Krug(*args).area()
-#     if len(args) == 2:
-#         return Right(*args).area()
-#     if len(args) == 3:
-#         return Triangle(*args).area()
-#     if len(args) > 3:
-#         return False
+def area(*args):
+    if len(args) == 1:
+        return Krug(*args).area()
+    if len(args) == 2:
+        return Right(*args).area()
+    if len(args) == 3:
+        return Triangle(*args).area()
+    if len(args) > 3:
+        return False
 
 if __name__ == '__main__':
     # print(area(3,4,5,1))
     # krug = Krug(6)
     # area_krug = krug.area()
     # print(area_krug)
-    tri = Triangle(1,-2,3)
+    tri = Triangle(1,3,3)
     area_tri = tri.area()
     pu = tri.right_triangle()
     print(area_tri, pu)
