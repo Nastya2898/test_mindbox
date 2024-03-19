@@ -18,7 +18,7 @@ class Triangle(Figure):
         #     not (self.a + self.b > self.c and self.a + self.c > self.b and self.b + self.c > self.a)
         # except ValueError: raise ValueError('не треугольник')
         if not (self.a + self.b > self.c and self.a + self.c > self.b and self.b + self.c > self.a)\
-                and (self.a>0 and self.b>0 and self.c>0):
+                and (self.a<0 or self.b<0 or self.c<0):
             raise ValueError('не треугольник')
 
     def area(self):
@@ -54,6 +54,10 @@ if __name__ == '__main__':
     area_tri = tri.area()
     pu = tri.right_triangle()
     print(area_tri, pu)
+    # tri = Triangle(1,-3,3)
+    # area_tri = tri.area()
+    # pu = tri.right_triangle()
+    # print(area_tri, pu)
     # right = Right(6, 2)
     # area_right = right.area()
     # print(area_right)
