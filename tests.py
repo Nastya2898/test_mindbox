@@ -9,7 +9,7 @@ class TestFigures(unittest.TestCase):
             self.assertEqual(figures.area(*keys), val)
 
     def test_is_triangle(self):
-        with self.assertRaises(ValueError): figures.area(1, 2, 3, )
+        with self.assertRaises(ValueError): figures.area(1, -2, 3, )
 
     def test_is_right_triangle(self):
         data = { (3,4,5 ): True, (3,4,6 ): False,}
