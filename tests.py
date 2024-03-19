@@ -2,7 +2,7 @@ import unittest
 import area as figures
 
 
-class TestFigures(unittest.TestCase):
+class Tests(unittest.TestCase):
     def test_area(self):
         area_data = {(6, ): 113.09733552923255, (6, 2, ): 12,(3, 4, 5, ): 6, }
         for keys, val in area_data.items():
